@@ -10,6 +10,7 @@ function Home() {
         {`
           .home-bg {
             min-height: 100vh;
+            overflow-x: hidden;
             width: 100vw;
             background-image: url("${BACKGROUND_IMAGE_URL}");
             background-size: cover;
@@ -21,6 +22,7 @@ function Home() {
 
           .overlay {
             min-height: 100vh;
+            overflow-x: hidden;
             background: rgba(0, 0, 0, 0.6);
             display: flex;
             align-items: center;
@@ -29,6 +31,7 @@ function Home() {
           }
 
           .home-content {
+            overflow-x: hidden;
             max-width: 850px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(6px);
@@ -100,13 +103,13 @@ function Home() {
               Mfumo huu unakusaidia kuona streak, maendeleo, na
               progress yako kwa uwazi ili ujenge nidhamu ya muda mrefu.
             </p>
-
+{/* 
             <ul className="features">
               <li>✔ Rekodi habits za kila siku</li>
               <li>🔥 Fuata streak zako mfululizo</li>
               <li>📊 Angalia maendeleo yako</li>
               <li>📅 Pata muhtasari wa maendeleo</li>
-            </ul>
+            </ul> */}
 
             <div className="buttons">
               <Link to="/habits">

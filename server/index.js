@@ -1,13 +1,40 @@
-const exprass = require('express');
-const app = exprass();  
+const express = require('express')
+const app =express();
 
-const PORT = process.env.PORT || 3000;
-app.get('/', (req, res) => {
-    res.send('my backend is running successfully ');
+const PORT = 3000;
+
+
+app.use(express.json());
+
+app.get('/api', (req, res) => {
+    res.json({message: 'my backend is on port 3000'})
 });
 
-app.listen(PORT, () => {
-    console.log(`my server is running on port ${PORT}`);
+app.post('/api/data', (req,res) => {
+    const data =req.body;
+    res.json({
+        message: 'data received',
+        received: data
+    });
 });
+
+app.listen(PORT, () =>{
+    console.log('server is running: http://localhost:${PORT}')
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
